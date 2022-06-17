@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Green */
+.loginbutton {
+  color: green;
+}
+
+.loginbutton:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Main')">Main</button>
+  <button class="tablinks" onclick="openPage(event, 'Workouts')">Workouts</button>
+  <button class="tablinks" onclick="openPage(event, 'Welcome')">Welcome</button>
+</div>
+
+<div id="Main" class="tabcontent">
+  <h3>Main</h3>
+  <p>Site is underdevelopment. Please be patient. We plan to have a calorie tracker, weight tracker, exercise logger, and more</p>
+</div>
+
+<div id="Workouts" class="tabcontent">
+  <h3>Workouts</h3>
+   <br/>
+  <h4>Aerobic: </h4>
+  <p>Aerobic exercise is exercise that speeds up your heartrate and breathing. There are many benefits of aerobic exercise. These benefits include increasing endurance, burning body fat, boosting your mood, and reducing your risk for several health issues such as type 2 diabetes, depression, falls, and heart disease and more.
+        It is recommended that you spend 150 minutes a week doing moderate-intensity activities such as swimming, cycling, jogging, brisk walking, jogging and more. If you have limited space, you can try marching in place.
+  </p>
+    <br/>
+  <h4>Stretching: </h4>
+  <p>You should stretch before exercise and at least 3-4 times a week to loosen up muscles, for your own safety. Start with dynamic stretches then move onto static stretches.
+  <br/>
+  <h4>Strength training: </h4>
+  <p>You should do this exercise for the health benefits beyond simply strength such as improved bone growth. Do it 2-3 times a week. body weight exercises, like pushups are a good place to start.
+  <br/>
+  <h4>Balance exercises:</h4>
+  <p>Young and healthy people tend to leave balance exercises to seniors, people that are old. What they might forget is that training your balances can help or prevent a lot of muscle injuries. Yoga or Tai Chi are among the most popular balance workouts.
+  It is important to mention that balance exercises are very effective when it comes to physical therapy because it helps to strengthen the muscles, joint flexibility and much more.
+  <br/>
+  <p>Try doing body weight exercise while waiting to for us get our product set up!</p>
+  <br/>
+  <p>Source: https://www.health.harvard.edu/exercise-and-fitness/the-4-most-important-types-of-exercise</p>
+</div>
+
+<div id="Welcome" class="tabcontent">
+  <h3>Welcome</h3>
+  <p>Click button to got to welcome page</p>
+  <!-- make the button go to login page -->
+  <a href="indexWelcom.html">
+  	<button class="btn loginbutton">Welcome</button>
+  </a>
+  
+</div>
+
+
+
+<script>
+function openPage(evt, pageName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(pageName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html> 

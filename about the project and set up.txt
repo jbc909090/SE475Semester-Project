@@ -1,0 +1,13 @@
+Project made by Diallo, Sara, and Jacob
+
+This was a group project and made on google cloud and i have decided to preserve it here
+About the project:
+Was supposed to be a webpage about fitness, users login and via the site add, delete, and view databases
+class seemed to cut the project short and we would have loved to make it more complex, such as making the login function lock your user id for adding, viewing, and deleting
+About the database:
+the .sql files used 1 users to access them
+the user had access only to a specifc MySQL folder (called) with all the .sql files and nothing else 
+we used phpmyadmin to step up the data base
+
+Thus you'll need PHPmyadmin to run this or at least set it up, the .sql files are scripts that load up the databases
+you will also need to either edit the "config.php" file to have the correct user info or set up a user matching that file
